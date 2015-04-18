@@ -44,5 +44,19 @@
         }
       }
     }
-  }
+  },
+  "requests": [
+    {
+      "query_params": [
+        {
+          "name": "school",
+          "value": "3"
+        },
+        {
+          "name": "metro",
+          "value": "2"
+        }
+      ]
+    }
+  ]
 }

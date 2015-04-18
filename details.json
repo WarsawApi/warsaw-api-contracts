@@ -39,5 +39,15 @@
         }
       }
     }
-  }
+  },
+  "requests": [
+    {
+      "path_params": [
+        {
+          "name": "id",
+          "value": "1"
+        }
+      ]
+    }
+  ]
 }

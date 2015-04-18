@@ -1,0 +1,48 @@
+{
+  "request": {
+    "http_method": "get",
+    "path": "/search",
+    "meta": {
+      "request": {
+        "query_params": [
+          {
+            "name": "school",
+            "type": "number"
+          },
+          {
+            "name": "metro",
+            "type": "number"
+          }
+        ]
+      },
+      "response": {
+        "body": {
+          "type": "array",
+          "embedded": [
+            {
+              "type": "object",
+              "embedded": [
+                {
+                  "name": "id",
+                  "type": "string"
+                },
+                {
+                  "name": "latitude",
+                  "type": "string"
+                },
+                {
+                  "name": "longitude",
+                  "type": "string"
+                },
+                {
+                  "name": "name",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  }
+}

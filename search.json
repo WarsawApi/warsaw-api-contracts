@@ -1,62 +1,59 @@
 {
-  "request": {
-    "http_method": "get",
-    "path": "/search",
-    "meta": {
-      "request": {
-        "query_params": [
-          {
-            "name": "school",
-            "type": "number"
-          },
-          {
-            "name": "metro",
-            "type": "number"
-          }
-        ]
-      },
-      "response": {
-        "body": {
-          "type": "array",
-          "embedded": [
-            {
-              "type": "object",
-              "embedded": [
-                {
-                  "name": "id",
-                  "type": "string"
-                },
-                {
-                  "name": "latitude",
-                  "type": "string"
-                },
-                {
-                  "name": "longitude",
-                  "type": "string"
-                },
-                {
-                  "name": "name",
-                  "type": "string"
-                }
-              ]
-            }
-          ]
-        }
-      }
-    }
-  },
-  "requests": [
-    {
-      "query_params": [
+  "schema": {
+    "request": {
+      "path": "/search",
+      "method": "get",
+      "params": [
         {
           "name": "school",
-          "value": "3"
+          "type": "number"
         },
         {
           "name": "metro",
-          "value": "2"
+          "type": "number"
         }
       ]
+    },
+    "response": {
+      "body": {
+        "type": "array",
+        "embedded": [
+          {
+            "type": "object",
+            "embedded": [
+              {
+                "name": "id",
+                "type": "string"
+              },
+              {
+                "name": "latitude",
+                "type": "string"
+              },
+              {
+                "name": "longitude",
+                "type": "string"
+              },
+              {
+                "name": "name",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "examples": [
+    {
+      "request": {
+        "params" : {
+          "school": 3,
+          "metro": 5
+        }
+      },
+      "response": {
+        "body_path": "/search/search_example.json"
+      }
     }
   ]
 }

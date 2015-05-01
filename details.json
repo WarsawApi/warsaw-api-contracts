@@ -1,53 +1,53 @@
 {
-  "request": {
-    "http_method": "get",
-    "path": "/details",
-    "meta": {
-      "request": {
-        "path_params": [
+  "schema": {
+    "request": {
+      "path": "/details",
+      "method": "get",
+      "params": [
+        {
+          "name": "id",
+          "type": "string"
+        }
+      ]
+    },
+    "response": {
+      "body": {
+        "type": "object",
+        "embedded": [
           {
             "name": "id",
             "type": "string"
+          },
+          {
+            "name": "latitude",
+            "type": "string"
+          },
+          {
+            "name": "longitude",
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "url",
+            "type": "string"
           }
         ]
-      },
-      "response": {
-        "body": {
-          "type": "object",
-          "embedded": [
-            {
-              "name": "id",
-              "type": "string"
-            },
-            {
-              "name": "latitude",
-              "type": "string"
-            },
-            {
-              "name": "longitude",
-              "type": "string"
-            },
-            {
-              "name": "name",
-              "type": "string"
-            },
-            {
-              "name": "url",
-              "type": "string"
-            }
-          ]
-        }
       }
     }
   },
-  "requests": [
+  "examples": [
     {
-      "path_params": [
-        {
-          "name": "id",
-          "value": "1"
+      "request": {
+        "params": {
+          "id": 1
         }
-      ]
+      },
+      "response": {
+        "body_path": "/details/details_example.json"
+      }
     }
   ]
 }

@@ -16,26 +16,32 @@
     },
     "response": {
       "body": {
-        "type": "array",
+        "type": "object",
         "embedded": [
           {
-            "type": "object",
+            "name": "items",
+            "type": "array",
             "embedded": [
               {
-                "name": "id",
-                "type": "string"
-              },
-              {
-                "name": "latitude",
-                "type": "string"
-              },
-              {
-                "name": "longitude",
-                "type": "string"
-              },
-              {
-                "name": "name",
-                "type": "string"
+                "type": "object",
+                "embedded": [
+                  {
+                    "name": "id",
+                    "type": "string"
+                  },
+                  {
+                    "name": "latitude",
+                    "type": "string"
+                  },
+                  {
+                    "name": "longitude",
+                    "type": "string"
+                  },
+                  {
+                    "name": "address",
+                    "type": "string"
+                  }
+                ]
               }
             ]
           }
@@ -46,7 +52,7 @@
   "examples": [
     {
       "request": {
-        "params" : {
+        "params": {
           "school": 3,
           "metro": 5
         }

@@ -27,7 +27,7 @@
             "type": "string"
           },
           {
-            "name": "name",
+            "name": "address",
             "type": "string"
           },
           {

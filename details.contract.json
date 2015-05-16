@@ -33,6 +33,20 @@
           {
             "name": "url",
             "type": "string"
+          },
+          {
+            "name": "distances",
+            "type": "object",
+            "embedded": [
+              {
+                "name": "metro",
+                "type": "string"
+              },
+              {
+                "name": "school",
+                "type": "string"
+              }
+            ]
           }
         ]
       }

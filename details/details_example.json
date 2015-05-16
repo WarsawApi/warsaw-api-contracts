@@ -3,5 +3,9 @@
   "latitude": "15.56",
   "longitude": "15.56",
   "name": "The Building",
-  "url": "http://upload.wikimedia.org/wikipedia/commons/6/6c/Looking_Up_at_Empire_State_Building.JPG"
+  "url": "http://upload.wikimedia.org/wikipedia/commons/6/6c/Looking_Up_at_Empire_State_Building.JPG",
+  "distances": {
+    "metro": "405m",
+    "school": "77m"
+  }
 }

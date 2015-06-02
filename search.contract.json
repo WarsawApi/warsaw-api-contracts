@@ -5,12 +5,52 @@
       "method": "get",
       "params": [
         {
-          "name": "school",
-          "type": "number"
-        },
-        {
-          "name": "metro",
-          "type": "number"
+          "name": "preferences",
+          "type": "object",
+          "embedded": [
+            {
+              "name": "nearby",
+              "type": "object",
+              "embedded": [
+                {
+                  "name": "phrase",
+                  "type": "string"
+                },
+                {
+                  "name": "location",
+                  "type": "object",
+                  "embedded": [
+                    {
+                      "name": "latitude",
+                      "type": "string"
+                    },
+                    {
+                      "name": "longitude",
+                      "type": "string"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "transportation",
+              "type": "object",
+              "embedded": [
+                {
+                  "name": "subway",
+                  "type": "boolean"
+                },
+                {
+                  "name": "tramway",
+                  "type": "boolean"
+                },
+                {
+                  "name": "subway",
+                  "type": "boolean"
+                }
+              ]
+            }
+          ]
         }
       ]
     },

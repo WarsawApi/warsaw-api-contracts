@@ -51,6 +51,26 @@
               ]
             }
           ]
+        },
+        {
+          "name": "filters",
+          "type": "object",
+          "embedded": [
+            {
+              "name": "price",
+              "type": "object",
+              "embedded": [
+                {
+                  "name": "min",
+                  "type": "string"
+                },
+                {
+                  "name": "max",
+                  "type": "string"
+                }
+              ]
+            }
+          ]
         }
       ]
     },

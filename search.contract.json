@@ -49,6 +49,78 @@
                   "type": "boolean"
                 }
               ]
+            },
+            {
+              "name": "culture",
+              "type": "object",
+              "embeded": [
+                {
+                  "name": "cinemas",
+                  "type": "boolean"
+                },
+                {
+                  "name": "exhibitions",
+                  "type": "boolean"
+                },
+                {
+                  "name": "theaters",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "name": "entertainment",
+              "type": "object",
+              "embeded": [
+                {
+                  "name": "clubs",
+                  "type": "boolean"
+                },
+                {
+                  "name": "restaurants",
+                  "type": "boolean"
+                },
+                {
+                  "name": "pubs",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "name": "sport",
+              "type": "object",
+              "embeded": [
+                {
+                  "name": "fitness",
+                  "type": "boolean"
+                },
+                {
+                  "name": "pools",
+                  "type": "boolean"
+                },
+                {
+                  "name": "tennis",
+                  "type": "boolean"
+                }
+              ]
+            },
+            {
+              "name": "recreation",
+              "type": "object",
+              "embeded": [
+                {
+                  "name": "parks",
+                  "type": "boolean"
+                },
+                {
+                  "name": "bikes",
+                  "type": "boolean"
+                },
+                {
+                  "name": "reservoirs",
+                  "type": "boolean"
+                }
+              ]
             }
           ]
         },
@@ -58,6 +130,34 @@
           "embedded": [
             {
               "name": "price",
+              "type": "object",
+              "embedded": [
+                {
+                  "name": "min",
+                  "type": "string"
+                },
+                {
+                  "name": "max",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "measurement",
+              "type": "object",
+              "embedded": [
+                {
+                  "name": "min",
+                  "type": "string"
+                },
+                {
+                  "name": "max",
+                  "type": "string"
+                }
+              ]
+            },
+            {
+              "name": "rooms",
               "type": "object",
               "embedded": [
                 {

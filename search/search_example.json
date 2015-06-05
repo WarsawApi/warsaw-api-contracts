@@ -1,10 +1,16 @@
 {
-  "items": [
-    {
-      "id": "1",
-      "latitude": "15.56",
-      "longitude": "15.56",
-      "address": "Street, City"
+  "nearby": {
+    "phrase": "some phrase",
+    "location": {
+      "id": 0,
+      "latitude": "12",
+      "longitude": "123",
+      "address": null
     }
-  ]
+  },
+  "transportation": null,
+  "culture": null,
+  "entertainment": null,
+  "sport": null,
+  "recreation": null
 }

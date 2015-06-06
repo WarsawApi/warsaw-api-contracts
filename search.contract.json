@@ -5,168 +5,174 @@
       "method": "get",
       "params": [
         {
-          "name": "preferences",
+          "name": "request",
           "type": "object",
-          "embedded": [
+          "embeded": [
             {
-              "name": "nearby",
+              "name": "preferences",
               "type": "object",
               "embedded": [
                 {
-                  "name": "phrase",
-                  "type": "string"
-                },
-                {
-                  "name": "location",
+                  "name": "nearby",
                   "type": "object",
                   "embedded": [
                     {
-                      "name": "latitude",
+                      "name": "phrase",
                       "type": "string"
                     },
                     {
-                      "name": "longitude",
-                      "type": "string"
+                      "name": "location",
+                      "type": "object",
+                      "embedded": [
+                        {
+                          "name": "latitude",
+                          "type": "string"
+                        },
+                        {
+                          "name": "longitude",
+                          "type": "string"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "name": "transportation",
+                  "type": "object",
+                  "embedded": [
+                    {
+                      "name": "subway",
+                      "type": "boolean"
+                    },
+                    {
+                      "name": "tramway",
+                      "type": "boolean"
+                    },
+                    {
+                      "name": "bus",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "name": "culture",
+                  "type": "object",
+                  "embeded": [
+                    {
+                      "name": "cinemas",
+                      "type": "boolean"
+                    },
+                    {
+                      "name": "exhibitions",
+                      "type": "boolean"
+                    },
+                    {
+                      "name": "theaters",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "name": "entertainment",
+                  "type": "object",
+                  "embeded": [
+                    {
+                      "name": "clubs",
+                      "type": "boolean"
+                    },
+                    {
+                      "name": "restaurants",
+                      "type": "boolean"
+                    },
+                    {
+                      "name": "pubs",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "name": "sport",
+                  "type": "object",
+                  "embeded": [
+                    {
+                      "name": "fitness",
+                      "type": "boolean"
+                    },
+                    {
+                      "name": "pools",
+                      "type": "boolean"
+                    },
+                    {
+                      "name": "tennis",
+                      "type": "boolean"
+                    }
+                  ]
+                },
+                {
+                  "name": "recreation",
+                  "type": "object",
+                  "embeded": [
+                    {
+                      "name": "parks",
+                      "type": "boolean"
+                    },
+                    {
+                      "name": "bikes",
+                      "type": "boolean"
+                    },
+                    {
+                      "name": "reservoirs",
+                      "type": "boolean"
                     }
                   ]
                 }
               ]
             },
             {
-              "name": "transportation",
+              "name": "filters",
               "type": "object",
               "embedded": [
                 {
-                  "name": "subway",
-                  "type": "boolean"
+                  "name": "price",
+                  "type": "object",
+                  "embedded": [
+                    {
+                      "name": "min",
+                      "type": "string"
+                    },
+                    {
+                      "name": "max",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
-                  "name": "tramway",
-                  "type": "boolean"
+                  "name": "measurement",
+                  "type": "object",
+                  "embedded": [
+                    {
+                      "name": "min",
+                      "type": "string"
+                    },
+                    {
+                      "name": "max",
+                      "type": "string"
+                    }
+                  ]
                 },
                 {
-                  "name": "bus",
-                  "type": "boolean"
-                }
-              ]
-            },
-            {
-              "name": "culture",
-              "type": "object",
-              "embeded": [
-                {
-                  "name": "cinemas",
-                  "type": "boolean"
-                },
-                {
-                  "name": "exhibitions",
-                  "type": "boolean"
-                },
-                {
-                  "name": "theaters",
-                  "type": "boolean"
-                }
-              ]
-            },
-            {
-              "name": "entertainment",
-              "type": "object",
-              "embeded": [
-                {
-                  "name": "clubs",
-                  "type": "boolean"
-                },
-                {
-                  "name": "restaurants",
-                  "type": "boolean"
-                },
-                {
-                  "name": "pubs",
-                  "type": "boolean"
-                }
-              ]
-            },
-            {
-              "name": "sport",
-              "type": "object",
-              "embeded": [
-                {
-                  "name": "fitness",
-                  "type": "boolean"
-                },
-                {
-                  "name": "pools",
-                  "type": "boolean"
-                },
-                {
-                  "name": "tennis",
-                  "type": "boolean"
-                }
-              ]
-            },
-            {
-              "name": "recreation",
-              "type": "object",
-              "embeded": [
-                {
-                  "name": "parks",
-                  "type": "boolean"
-                },
-                {
-                  "name": "bikes",
-                  "type": "boolean"
-                },
-                {
-                  "name": "reservoirs",
-                  "type": "boolean"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "name": "filters",
-          "type": "object",
-          "embedded": [
-            {
-              "name": "price",
-              "type": "object",
-              "embedded": [
-                {
-                  "name": "min",
-                  "type": "string"
-                },
-                {
-                  "name": "max",
-                  "type": "string"
-                }
-              ]
-            },
-            {
-              "name": "measurement",
-              "type": "object",
-              "embedded": [
-                {
-                  "name": "min",
-                  "type": "string"
-                },
-                {
-                  "name": "max",
-                  "type": "string"
-                }
-              ]
-            },
-            {
-              "name": "rooms",
-              "type": "object",
-              "embedded": [
-                {
-                  "name": "min",
-                  "type": "string"
-                },
-                {
-                  "name": "max",
-                  "type": "string"
+                  "name": "rooms",
+                  "type": "object",
+                  "embedded": [
+                    {
+                      "name": "min",
+                      "type": "string"
+                    },
+                    {
+                      "name": "max",
+                      "type": "string"
+                    }
+                  ]
                 }
               ]
             }
